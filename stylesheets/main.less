@@ -1,8 +1,12 @@
 /* IMPORTS */
-@import '../bower_components/bootstrap/less/bootstrap.less';
-@import '../bower_components/retina.js/src/retina.less';
-@import '../bower_components/components-font-awesome/less/font-awesome.less';
-@import '../bower_components/animate-less/less/animate.less';
+/* bootstrap */
+@import '../libs/bootstrap/less/bootstrap.less';
+@import 'bootstrap-custom-variables.less';
+/* helper mixin for retina images */
+@import '../libs/retina.js/src/retina.less';
+/* css animation classes: usage: .animation-name(fadeInDown); */
+@import '../libs/animate-less/less/animate.less';
+@import 'mixins.less';
 /* END IMPORTS */
 
 /* GLOBALS */
@@ -10,9 +14,28 @@
 /* END GLOBALS */
 
 /* HEADER */
-.header {
-    .a {
-        background: red;
+header.primary {
+    .container();
+    .content {
+        .jumbotron();
+        h1 {
+            .animate(fadeInLeft, .7s);
+        }
     }
 }
 /* END HEADER */
+
+/* MAIN */
+#main {
+    .container();
+    .news {
+         .make-row();
+         .content {
+             .make-sm-column(8);
+         }   
+         .info {
+             .make-sm-column(4);
+         }
+    }
+}
+/* END MAIN */
