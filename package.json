@@ -5,9 +5,10 @@
         "url": "https://github.com/sikessle/website-template/issues"
     },
     "dependencies": {
-        "grunt": "~0.4",
+        "grunt": "latest",
         "grunt-contrib-less": "latest",
-        "grunt-contrib-watch": "latest"
+        "grunt-contrib-watch": "latest",
+        "grunt-autoprefixer": "latest"
     },
     "description": "website-template with html5, bootstrap 3",
     "homepage": "https://github.com/sikessle/website-template",
