@@ -8,4 +8,6 @@ require(['jquery', 'domReady!', 'bootstrap'], function ($, domReady) {
 	// Code goes here
 	// add dependencies to require call above 
 	// declare modules with define and call them with require
+	// define apps etc. in separate files and use them here to wire them
+	// together.
 });
