@@ -11,11 +11,8 @@ requirejs.config({
 		domReady: '../libs/domReady/domReady'
 	},
 	shim: {
-		bootstrap: {
-			deps: [
-				'jquery'
-			]
-		}
+		bootstrap: { deps: ['jquery'] }
+		// add other non-AMD libs with their dependencies here
 	},
 	packages: [
 
