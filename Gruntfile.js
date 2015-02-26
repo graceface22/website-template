@@ -30,6 +30,15 @@ module.exports = function (grunt) {
             no_dest: {
                 src: "stylesheets/main.min.css" // will be overwritten
             }
+        },
+
+        bowerRequirejs: {
+            all: {
+                rjsConfig: 'javascripts/config.js',
+                options: {
+                    transitive: true
+                }
+            }
         }
 
     });
@@ -37,6 +46,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-bower-requirejs');
 
     // Overwriting less task to execute autoprefixer
     grunt.task.renameTask('less', 'less_compile');
