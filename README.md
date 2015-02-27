@@ -13,7 +13,7 @@ The following npm packages must be installed and accessible by the shell:
 - onchange
 
 For convenience you can execute "npm run install-tools" which installs 
-them via npm globally. If you do not want a global install, install them yourself via npm install [package].
+them via npm globally. If you do not want a global install, call "npm run install-tools -- local"
 
 ## Getting Started
 - Run 'npm install' for installation

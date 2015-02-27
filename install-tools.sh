@@ -1,21 +1,24 @@
 #!/bin/bash
-
-CMD="npm install -g"
-PACKAGES=(bower bower-requirejs autoprefixer less less-plugin-clean-css onchange)
+FLAG="-g"
+if [ "$1" == "local" ]; then
+	FLAG=""
+fi
+CMD="npm install $FLAG"
+BUILD_TOOLS=(bower bower-requirejs autoprefixer less less-plugin-clean-css onchange)
 
 function exists() {
 	npm list -g "$1" &> /dev/null || npm list "$1" &> /dev/null
 }
 
-echo "Installing required npm packages.."
+echo "Installing required npm build tools.."
 
-for pkg in "${PACKAGES[@]}"
+for tool in "${BUILD_TOOLS[@]}"
 do
-	if exists "$pkg"; then
-		echo "[$pkg] already installed. Skipping"
+	if exists "$tool"; then
+		echo "[$tool] already installed. Skipping"
 	else
-		echo "[$pkg] is missing. Installing now:"
-		$CMD $pkg
+		echo "[$tool] is missing. Installing now:"
+		$CMD $tool
 	fi
 done
 
