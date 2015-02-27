@@ -22,7 +22,7 @@
     "scripts": {
         "install-tools": "./install-tools.sh",
         "clean": "rm -f $npm_package_config_main_min_css",
-        "bower": "bower install",
+        "bower": "bower install -p",
         "postbower": "bower-requirejs -t -c $npm_package_config_requirejs_config",
         "watch": "onchange 'stylesheets/*.less' -- npm run compile",
         "compile": "lessc --clean-css=\"--s1 --advanced --compatibility=ie8\" $npm_package_config_main_src_css $npm_package_config_main_min_css",
