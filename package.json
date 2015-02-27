@@ -1,22 +1,22 @@
 {
+    "name": "website-template",
     "version": "1.0.0",
     "author": "agentur kessler",
+    "description": "website template with html5, bootstrap 3 etc.",
+    "homepage": "https://github.com/sikessle/website-template",
     "bugs": {
         "url": "https://github.com/sikessle/website-template/issues"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sikessle/website-template.git"
+    },
+    "license": "MIT",
     "dependencies": {
         "grunt": "latest",
         "grunt-contrib-less": "latest",
         "grunt-contrib-watch": "latest",
         "grunt-autoprefixer": "latest",
         "grunt-bower-requirejs": "latest"
-    },
-    "description": "website-template with html5, bootstrap 3",
-    "homepage": "https://github.com/sikessle/website-template",
-    "license": "MIT",
-    "name": "website-template",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/sikessle/website-template.git"
     }
 }
