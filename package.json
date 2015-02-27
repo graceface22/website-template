@@ -13,10 +13,23 @@
     },
     "license": "MIT",
     "dependencies": {
-        "grunt": "latest",
-        "grunt-contrib-less": "latest",
-        "grunt-contrib-watch": "latest",
-        "grunt-autoprefixer": "latest",
-        "grunt-bower-requirejs": "latest"
+        "bower-requirejs": "latest",
+        "autoprefixer": "latest",
+        "less": "latest",
+        "less-plugin-clean-css": "latest",
+        "onchange": "latest"
+    },
+    "config": {
+        "main_src_css": "stylesheets/main.less",
+        "main_min_css": "stylesheets/main.min.css",
+        "requirejs_config": "javascripts/config.js"
+    },
+    "scripts": {
+        "clean": "rm -f $npm_package_config_main_min_css",
+        "bower": "bower install",
+        "postbower": "bower-requirejs -t -c $npm_package_config_requirejs_config",
+        "watch": "onchange 'stylesheets/*.less' -- npm run compile",
+        "compile": "lessc --clean-css=\"--s1 --advanced --compatibility=ie8\" $npm_package_config_main_src_css $npm_package_config_main_min_css",
+        "postcompile": "autoprefixer -b 'last 2 version, ie 8, ie 9' $npm_package_config_main_min_css"
     }
 }

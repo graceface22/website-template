@@ -1,16 +1,10 @@
 {
   "name": "website-template",
-  "version": "1.0.0",
+  "homepage": "www.agenturkessler.com",
+  "license": "MIT",
   "authors": [
     "agentur kessler"
   ],
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components"
-  ],
-  "license": "MIT",
-  "homepage": "www.agenturkessler.com",
   "dependencies": {
     "bootstrap": "~3.3",
     "jquery": "~1.11",

@@ -3,7 +3,10 @@
 Website template for HTML5 based websites with Twitter bootstrap and other javascript stuff based on bower.io
 
 ## Getting Started
-- Run 'npm install'
-- Run 'bower install'
-- Run 'grunt bowerRequirejs' to autowire bower dependencies in require js
-- Run 'grunt watch' to recompile on change .less files
+- Run 'npm install' for installation
+- Run 'npm run bower' (also autowires dependencies for AMD in bower.json)
+
+## Working on a website
+- Run 'npm run watch' to recompile .less files on change
+- Run 'npm run compile' to recompile .less files manually
+- Run 'npm run clean' to cleanup compiled files
