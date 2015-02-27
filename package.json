@@ -13,11 +13,6 @@
     },
     "license": "MIT",
     "dependencies": {
-        "bower-requirejs": "latest",
-        "autoprefixer": "latest",
-        "less": "latest",
-        "less-plugin-clean-css": "latest",
-        "onchange": "latest"
     },
     "config": {
         "main_src_css": "stylesheets/main.less",
@@ -25,6 +20,7 @@
         "requirejs_config": "javascripts/config.js"
     },
     "scripts": {
+        "install-tools": "./install-tools.sh",
         "clean": "rm -f $npm_package_config_main_min_css",
         "bower": "bower install",
         "postbower": "bower-requirejs -t -c $npm_package_config_requirejs_config",
