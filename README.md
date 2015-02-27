@@ -3,7 +3,7 @@
 Website template for HTML5 based websites with Twitter bootstrap and other javascript stuff based on bower.io
 
 ## Getting Started
-- Run 'npm install' for installation
+- Run 'npm install --production' for installation
 - Run 'npm run bower' (also autowires dependencies for AMD in bower.json)
 
 ## Working on a website
