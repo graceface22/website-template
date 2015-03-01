@@ -1,31 +1,3 @@
 {
-    "name": "website-template",
-    "version": "1.0.0",
-    "author": "agentur kessler",
-    "description": "website template with html5, bootstrap 3 etc.",
-    "homepage": "https://github.com/sikessle/website-template",
-    "bugs": {
-        "url": "https://github.com/sikessle/website-template/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/sikessle/website-template.git"
-    },
-    "license": "MIT",
-    "dependencies": {
-    },
-    "config": {
-        "main_src_css": "stylesheets/main.less",
-        "main_min_css": "stylesheets/main.min.css",
-        "requirejs_config": "javascripts/config.js"
-    },
-    "scripts": {
-        "install-tools": "./install-tools.sh",
-        "clean": "rm -f $npm_package_config_main_min_css",
-        "bower": "bower install -p",
-        "postbower": "bower-requirejs -t -c $npm_package_config_requirejs_config",
-        "watch": "onchange 'stylesheets/*.less' -- npm run compile",
-        "compile": "lessc --clean-css=\"--s1 --advanced --compatibility=ie8\" $npm_package_config_main_src_css $npm_package_config_main_min_css",
-        "postcompile": "autoprefixer -b 'last 2 version, ie 8, ie 9' $npm_package_config_main_min_css"
-    }
+    "name": "website-template"
 }
