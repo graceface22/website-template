@@ -16,7 +16,7 @@ CMD_JS_CONFIG_DEV = sed -i '' 's/$(JS_MAIN_PROD)/$(JS_MAIN_DEV)/g' $(REQUIREJS_C
 CMD_JS_CONFIG_PROD = sed -i '' 's/$(JS_MAIN_DEV)/$(JS_MAIN_PROD)/g' $(REQUIREJS_CONFIG)
 CMD_JS_OPTIMIZE = r.js -o baseUrl=$(JS_PATH) mainConfigFile=$(REQUIREJS_CONFIG) name=$(JS_MAIN_DEV) out=$(JS_PATH)/$(JS_MAIN_PROD).js
 
-.PHONY: compile clean bower watch build-tools dist requirejs-dev-config
+.PHONY: compile clean bower watch build-tools dist 
 
 compile: $(TARGETS)
 
@@ -26,7 +26,7 @@ $(TARGETS): $(COMPILE_SOURCES)
 	$(CMD_CSS_PREFIX)
 
 dist: bower
-	$(CMD_LESS) --clean-css="--s1 --advanced --compatibility=ie8"
+	$(CMD_LESS) --clean-css="--s1 --compatibility=ie8"
 	$(CMD_CSS_PREFIX)
 	$(CMD_JS_CONFIG_PROD)
 	$(CMD_JS_OPTIMIZE)

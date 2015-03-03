@@ -2,7 +2,7 @@
 requirejs.config({
 	baseUrl: 'javascripts',
 	paths: {
-		app: 'app.dev',
+		app: 'app.min',
 		bootstrap: '../libs/bootstrap/dist/js/bootstrap',
 		jquery: '../libs/jquery/dist/jquery',
 		domReady: '../libs/domReady/domReady',
