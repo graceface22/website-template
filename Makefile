@@ -7,7 +7,7 @@ REQUIREJS_CONFIG = javascripts/config.js
 CSS_PREFIX_COMPAT = "last 2 version, ie 8, ie 9"
 TARGETS = $(CSS_MAIN_TARGET)
 
-CMD_PREFIX = autoprefixer -b $(CSS_PREFIX_COMPAT) $(CSS_MAIN_TARGET)
+CMD_CSS_PREFIX = autoprefixer -b $(CSS_PREFIX_COMPAT) $(CSS_MAIN_TARGET)
 CMD_LESS = lessc $(CSS_MAIN_SRC) $(CSS_MAIN_TARGET)
 
 .PHONY: compile clean bower watch build-tools dist
@@ -16,11 +16,11 @@ compile: $(TARGETS)
 
 $(TARGETS): $(COMPILE_SOURCES)
 	$(CMD_LESS)
-	$(CMD_PREFIX)
+	$(CMD_CSS_PREFIX)
 
 dist:
 	$(CMD_LESS) --clean-css="--s1 --advanced --compatibility=ie8"
-	$(CMD_PREFIX)
+	$(CMD_CSS_PREFIX)
 
 clean:
 	rm -f $(CSS_MAIN_TARGET)
