@@ -3,4 +3,5 @@
 .sass-cache
 /node_modules
 /stylesheets/main.min.css
+/javascripts/app.min.js
 

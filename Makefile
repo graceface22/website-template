@@ -7,8 +7,8 @@ REQUIREJS_CONFIG = javascripts/init.js
 CSS_PREFIX_COMPAT = "last 2 version, ie 8, ie 9"
 TARGETS = $(CSS_MAIN_TARGET)
 JS_PATH = javascripts
-JS_MAIN_DEV = app-dev
-JS_MAIN_PROD = app-min
+JS_MAIN_DEV = app.dev
+JS_MAIN_PROD = app.min
 
 CMD_CSS_PREFIX = autoprefixer -b $(CSS_PREFIX_COMPAT) $(CSS_MAIN_TARGET)
 CMD_LESS = lessc $(CSS_MAIN_SRC) $(CSS_MAIN_TARGET)
@@ -33,7 +33,6 @@ dist: bower
 
 clean: 
 	$(CMD_JS_CONFIG_DEV)
-	rm -rf libs 
 	rm -f $(CSS_MAIN_TARGET) $(JS_PATH)/$(JS_MAIN_PROD).js
 
 bower:
