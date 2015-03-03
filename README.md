@@ -17,6 +17,7 @@ The following npm packages must be installed and accessible by the shell:
 - less
 - less-plugin-clean-css (no access in shell required)
 - onchange
+- requirejs (for the r.js optimizer)
 
 For convenience you can execute 'make build-tools' which installs 
 them via npm globally. If you do not want a global install, call 'make build-tools SCOPE=local'
