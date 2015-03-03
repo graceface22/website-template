@@ -1,4 +1,3 @@
-
 /* global requirejs */
 requirejs.config({
 	baseUrl: 'javascripts',
