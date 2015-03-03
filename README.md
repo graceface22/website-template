@@ -2,6 +2,12 @@
 
 Website template for HTML5 based websites with Twitter bootstrap and other javascript stuff based on bower.io
 
+## Assets
+
+The 'main.less' file is supposed to import all required stylesheet files. This file will be compiled and minified to 'main.min.css' which is the file to include in the html files.
+
+The 'app.js' is the starting point for your application. There you can put your DOM manipulation or build together a more sophisticated app by requiring the required modules (in separate files defined by 'define' function of requirejs).
+
 ## Prerequisites
 The following npm packages must be installed and accessible by the shell:
 
