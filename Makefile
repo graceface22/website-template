@@ -7,7 +7,7 @@ REQUIREJS_CONFIG = javascripts/config.js
 BROWSERS = "last 2 version, ie 8, ie 9"
 TARGETS = $(CSS_MAIN_TARGET)
 
-.PHONY: compile clean
+.PHONY: compile clean bower watch build-tools
 
 compile: $(TARGETS)
 
