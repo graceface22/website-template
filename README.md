@@ -28,6 +28,7 @@ them via npm globally. If you do not want a global install, call 'make build-too
 
 ## Working on a website
 - Run 'make bower' if you added a dependency in bower.json
+- Or run 'make bower-install BOWER_TARGET="bower.package.name"' to install and autowire with bower in one step.
 - Run 'make watch' to recompile .less files on change
 - Run 'make' or make compile' to recompile .less files manually
 - Run 'make clean' to cleanup compiled files
