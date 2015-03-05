@@ -33,7 +33,7 @@ bower:
 
 bower-install:
 	bower install -p $(BOWER_TARGET) --save
-	bower-requirejs -t -c $(REQUIREJS_CONFIG)	
+	bower-requirejs -t -c $(REQUIREJS_CONFIG)
 
 watch:
 	onchange $(CSS_WATCH) -- make compile
