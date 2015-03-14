@@ -4,7 +4,7 @@ if [ "$1" == "local" ]; then
 	FLAG=""
 fi
 CMD="npm install $FLAG"
-BUILD_TOOLS=(bower bower-requirejs autoprefixer less less-plugin-clean-css onchange requirejs)
+BUILD_TOOLS=(bower autoprefixer less less-plugin-clean-css onchange)
 
 function exists() {
 	npm list -g "$1" &> /dev/null || npm list "$1" &> /dev/null
